@@ -1,16 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to DASDASDASDASYour Vue.js App"/>
-  <HelloWorld msg="Welcome"/>
+  <img alt="Vue logo" src="./assets/203381.jpg">
+  <contador titulo="contador1"/>
+  <contador titulo="contador2"/>
+  <contador titulo="contador3"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import contador from './components/contador.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    contador
   }
 }
 </script>
@@ -23,6 +24,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+img{
+  width: 100px;
 }
 </style>
 
