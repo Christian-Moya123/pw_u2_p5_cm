@@ -84,7 +84,7 @@ export default {
     grid-template-rows: 150px repeat(5, 75px);
     background-color: rgb(210, 250, 30);
     margin-left: 520px;
-    margin-right: 660px;
+    margin-right: 560px;
     border-radius: 32px;
     padding: 15px;
     box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.435);

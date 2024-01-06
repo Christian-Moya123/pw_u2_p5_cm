@@ -4,19 +4,20 @@
   <contador titulo="contador2" v-bind:valor="calcularValor()"/>
   <contador titulo="contador2"/> -->
 
-  <calculadora/>
+  <Pregunta/>
   
 </template>
 
 <script>
 //import contador from './components/contador.vue'
 import calculadora from'./components/calculadora.vue'
+import Pregunta from'./components/Pregunta.vue'
 
 export default {
   name: 'App',
   components: {
 
-    calculadora
+    Pregunta
   },
   methods:{
     calcularValor(){
