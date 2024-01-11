@@ -4,7 +4,7 @@
   <contador titulo="contador2" v-bind:valor="calcularValor()"/>
   <contador titulo="contador2"/> -->
 
-  <Pregunta/>
+  <pokemon/>
   
 </template>
 
