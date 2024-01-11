@@ -12,12 +12,14 @@
 //import contador from './components/contador.vue'
 import calculadora from'./components/calculadora.vue'
 import Pregunta from'./components/Pregunta.vue'
+import pokemon from './components/pokemon.vue'
 
 export default {
   name: 'App',
   components: {
 
-    Pregunta
+    Pregunta,
+    pokemon
   },
   methods:{
     calcularValor(){
