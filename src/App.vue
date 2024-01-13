@@ -4,22 +4,23 @@
   <contador titulo="contador2" v-bind:valor="calcularValor()"/>
   <contador titulo="contador2"/> -->
 
-  <pokemon/>
+  <PokemonPage/>
   
 </template>
 
 <script>
 //import contador from './components/contador.vue'
 import calculadora from'./components/calculadora.vue'
-import Pregunta from'./components/Pregunta.vue'
+import PokemonPage from'./pages/PokemonPage.vue'
 import pokemon from './components/pokemon.vue'
 
 export default {
   name: 'App',
   components: {
 
-    Pregunta,
-    pokemon
+   
+    pokemon,
+    PokemonPage
   },
   methods:{
     calcularValor(){
