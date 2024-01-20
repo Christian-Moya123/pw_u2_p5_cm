@@ -1,5 +1,5 @@
 <template>
-  <div class="container" v-if="mostrarJuego">
+  <!-- <div class="container" v-if="mostrarJuego">
 
     <h1 class="titulo">Casino Pokemon</h1>
     <h2>Puntaje:{{ puntaje }}</h2>
@@ -25,15 +25,19 @@
     <h1>Puntaje: {{ puntaje }}</h1>
     <h1>Felicitaciones has ganado un premio de $10.000,00</h1>
     <button @click="reiniciar">Reiniciar</button>
-  </div>
+  </div> -->
+
+  <PokemonPage/>
 </template>
 
 <script>
 import Imagen from './components/Imagen.vue'
+import PokemonPage from "./pages/PokemonPage.vue";
 export default {
   name: 'App',
   components: {
-    Imagen
+    Imagen,
+    PokemonPage
   },
   data() {
     return {

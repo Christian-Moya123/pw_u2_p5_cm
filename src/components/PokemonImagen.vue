@@ -1,49 +1,42 @@
 <template>
-  <h1>Imagen</h1>
-<div class="pokemonContainer">
-
-  <img class="ocultar"  :src="imagenFuente" alt="no hay imagen">
-
-  <img v-if="showPokemon"  :src="imagenFuente" alt="no hay imagen">
-
-</div>
-</template>
-
-<script>
-export default {
-    props:{
-        pokemonId:{
-            type:Number,
-            required:true
-        },
-
-        showPokemon:{
-            type:Boolean,
-            required:true,
-            default:false
-        }
+    <div class="pokemon-container">
+      <img class="ocultar" :src="imagenFuente" alt="no se puede visualizar" />
+      <img :src="imagenFuente" alt="no se puede visualizar" v-if="showPokemon" />
+    </div>
+  </template>
+   
+  <script>
+  export default {
+    props: {
+      pokemonId: {
+        type: Number,
+        required: true,
+      },
     },
-
-    computed:{
-        imagenFuente(){
-            return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`
-        }
-    }
-}
-</script>
-
-<style>
-.ocultar{
+    showPokemon: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+    computed: {
+      imagenFuente() {
+        return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`;
+      },
+    },
+  };
+  </script>
+   
+  <style>
+  .ocultar {
     filter: brightness(0);
-}
-
-img{
+  }
+  img {
     height: 200px;
     position: absolute;
-    right: 45%;
-}
-
-.pokemonContainer{
+    right: 42%;
+  }
+   
+  .pokemon-container {
     height: 200px;
-}
-</style>
+  }
+  </style>
