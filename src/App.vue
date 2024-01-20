@@ -1,7 +1,7 @@
 <template>
   <div class="container" v-if="mostrarJuego">
 
-    <h1>Casino Pokemon</h1>
+    <h1 class="titulo">Casino Pokemon</h1>
     <h2>Puntaje:{{ puntaje }}</h2>
     <h2>Intentos: {{ intentos }}</h2>
 
@@ -11,17 +11,17 @@
     <Imagen :imagenUrl="url2" :texto="texto2"></Imagen>
     <Imagen :imagenUrl="url3" :texto="texto3"> </Imagen>
   </div>
-    <button v-on:click="jugar()">jugar</button>
+    <button class="boton" v-on:click="jugar()">jugar</button>
 
   </div>
 
-  <div v-if="mostrarPerdedor">
+  <div class="ganado" v-if="mostrarPerdedor">
     <h1>has utilizado tus 5 intentos</h1>
     <h1>"El juego ha termindo, intentalo nuevamente</h1>
     <button @click="reiniciar">Reiniciar</button>
   </div>
 
-  <div v-if="mostrarGanador">
+  <div class="perdido" v-if="mostrarGanador">
     <h1>Puntaje: {{ puntaje }}</h1>
     <h1>Felicitaciones has ganado un premio de $10.000,00</h1>
     <button @click="reiniciar">Reiniciar</button>
@@ -119,11 +119,29 @@ export default {
   justify-content: center;
   align-items: center;
 }
+ 
+
 
 button {
   padding: 10px;
   width: 140px;
   font-size: 27px;
   border: solid 3px black;
+}
+
+.ganado{
+  color: red;
+}
+
+.perdido{
+  color: blue;
+}
+
+.titulo{
+  color: red;
+}
+
+.boton{
+  margin-top: 20px;
 }
 </style>
